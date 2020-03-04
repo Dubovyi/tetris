@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #score{
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #tetris {
+            position: relative;
+            margin: 20px auto 0;
+            width: max-content;
+        }
+        .field {
+            margin-bottom: 10px;
+            background-color: #ffffff;
+        }
+        .row {
+            height: 25px;
+        }
+        .cell {
+            display: inline-block;
+            width: 25px;
+            height: 100%;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            font-size: 9px;
+            text-align: center;
+            line-height: 25px;
+        }
+        .cell.empty {
+            color: #ffffff;
+            background-color: #000000;
+        }
+        .cell.filled {
+            color: #000000;
+            background-color: #ffffff;
+        }
+        .button_start{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            font-size: 18px;
+        }
+        .button_start.hidden{
+            display: none;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="score">
+    <span>Score:</span>
+    <span><b id="score_value">0</b></span>
+</div>
+
+<div id="tetris">
+    <div class="field"></div>
+</div>
+
+<script src="tetris.js"></script>
+</body>
+</html>
